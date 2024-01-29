@@ -6,7 +6,11 @@ const App = () => {
     handleSubmit,
     formState: { errors, isSubmitting },
     setError,
-  } = useForm();
+  } = useForm({
+    defaultValues:{
+      email:"react@js.com",
+    },
+  });
 
   const onSubmit = async (data) => {
     try{
